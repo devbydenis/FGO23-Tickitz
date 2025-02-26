@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+  font-family: "Mulish", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-image: url("../assets/background.png");
+
+}

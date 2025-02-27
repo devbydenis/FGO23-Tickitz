@@ -15,7 +15,7 @@
 
 body {
   background-image: url("../assets/background.png");
-  background-attachment: fixed;
+  background-attachment: local;
   background-size: cover;
   background-position-y: center;
   display: flex;
@@ -120,8 +120,16 @@ form > button:hover {
   opacity: 0.9;
 }
 
-form > p {
-  color: var(--gray);
+form > .or {
+  color: var(--lightgrey);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+form > .or > div {
+  flex: 1;
+  border-bottom: 1px solid var(--lightgrey);
 }
 
 form section:last-child {
@@ -157,7 +165,7 @@ form section:last-child > img {
 
   form {
     width: 546px;
-    height: 756px;
+    height: 600px;
   }
 
   .steps {

@@ -95,6 +95,17 @@ form section input:focus {
   padding: 0 5px;
 }
 
+.forget-password {
+  /* border: 1px solid red; */
+  text-align: end;
+}
+.forget-password > a {
+  cursor: pointer;
+}
+.forget-password > a:hover {
+  text-decoration: underline;
+}
+
 form > button {
   background-color: var(--blue);
   color: var(--white);

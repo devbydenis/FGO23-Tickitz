@@ -1,6 +1,6 @@
 :root {
   --white: #ffffff;
-  --lightgrey:#A0A3BD;
+  --lightgrey:#c6c8da;
   --gray: #4E4B66;
   --black: #121212;
   --blue: #1D4ED8;
@@ -9,6 +9,8 @@
 * {
   box-sizing: border-box;
   font-family: "Mulish", Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -98,11 +100,12 @@ form > button {
   font-weight: bold;
 }
 form > button:hover {
-  transform: scale(0.9);
+  transform: scale(0.99);
+  opacity: 0.9;
 }
 
 form > p {
-  color: var(--lightgrey);
+  color: var(--gray);
 }
 
 form section:last-child {
@@ -112,13 +115,17 @@ form section:last-child {
   justify-content: space-evenly;
 }
 
-form section:last-child > a > button {
-  width: 100%;
+form section:last-child > a {
+  width: 50%;
   background-color: transparent;
   box-shadow: 0px 4px 10px 0px #00000014;
   border-style: none;
   cursor: pointer;
+  text-align: center;
 
+}
+form section:last-child > a:hover {
+  opacity: 0.5;
 }
 
 form section:last-child > img {
@@ -138,31 +145,47 @@ form section:last-child > img {
 
   .steps {
     /* border: 2px solid red; */
+    list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
+    /* padding-right: 40px; */
   }
-  .steps > span {
-    display: flex;
-    flex-direction: col;
-    align-items: center;
+  .steps > li {
+    /* border: 2px solid red; */
+    text-align: center;
   }
-  .steps > span:nth-child(2):before, 
-  .steps > span:nth-child(3):before {
-    content: "--------------";
-  }
-  .steps > span > p:first-child {
-    background-color: var(--blue);
+  .steps > li > p:nth-child(1) {
     color: var(--white);
+  }
+  .steps > li > p:nth-child(2) {
+    margin-top: 15px;
+  }
+  .steps > li > p:nth-child(2),
+  .steps > li:nth-child(even){
+    color: var(--blue);
+  }
+  .steps > li:nth-child(even){
+    font-weight: 600;
+  }
+  .steps > li:nth-child(1) > p:nth-child(1) {
+    background-color: var(--blue);
     border-radius: 50%;
-    padding: 10px 15px;
     margin: 0 10px;
+    padding: 10px;
   }
-  .steps-desc {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
+}
+.steps > li:nth-child(3) > p:nth-child(1) {
+  background-color: var(--blue);
+  border-radius: 50%;
+  margin: 2px;
+  padding: 10px;
+}
+.steps > li:nth-child(5) > p:nth-child(1) {
+  background-color: var(--blue);
+  border-radius: 50%;
+  margin: 0;
+  padding: 10px;
 }

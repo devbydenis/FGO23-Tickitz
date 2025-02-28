@@ -5,107 +5,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Footer</title>
   <style>
-    :root {
-    --white: #ffffff;
-    --lightgrey:#6E7191;
-    --gray: #4E4B66;
-    --black: #121212;
-    --blue: #1D4ED8;
+:root {
+  --white: #ffffff;
+  --lightgrey:#6E7191;
+  --gray: #4E4B66;
+  --black: #121212;
+  --blue: #1D4ED8;
 }
 
-    *{
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Mulish", Verdana, Geneva, Tahoma, sans-serif;
+  }
 
     /* <<<<< Footer -Desktop >>>>> */
     footer > ul {
-      list-style: none;
-    }
-    footer > ul h5 {
-      color: var(--black);
-      margin-bottom: 31px;
-    }
-    footer > p {
-      margin: 50px 0;
-    }
-    footer {
-      padding: 20px;
-      color: var(--lightgrey);
-      display: grid;
-      grid-template-columns: 1fr 250px 1fr 1fr;
-      grid-template-rows: 1fr 100px;
-      grid-template-areas: 
-      " tickitz  explore  sponsor  follow "
-      " copyright  copyright  copyright  copyright "
-      ;
-    }
-    .tickitz-footer {
-      grid-area: tickitz;
-    }
-    .explore-footer {
-      grid-area: explore;
-      /* padding-left: 20px; */
-    }
-    .sponsor-footer {
-      grid-area: sponsor;
-      /* padding-left: 20px; */
-    }
-    .follow-footer {
-      grid-area: follow;
-    }
-    .follow-footer > li {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-    .copyright-footer {
-      grid-area: copyright;
-      display: flex;
-      justify-content: center;
-    }
+  list-style: none;
+}
+footer > ul h5 {
+  color: var(--black);
+  margin-bottom: 31px;
+}
+footer > p {
+  margin: 50px 0;
+}
+footer {
+  padding: 20px;
+  color: var(--lightgrey);
+  display: grid;
+  grid-template-columns: 1fr 250px 1fr 1fr;
+  grid-template-rows: 1fr 100px;
+  grid-template-areas: 
+  " tickitz  explore  sponsor  follow "
+  " copyright  copyright  copyright  copyright "
+  ;
+}
 
-    @media screen and (max-width: 768px) {
-      footer {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 1fr);
-        grid-template-areas: 
-          " tickitz "
-          " explore "
-          " sponsor "
-          " follow "
-          " copyright "
-        ;
-      }
-      footer > ul > div {
-        display: flex; 
-        align-items: center;
-        gap: 15px; 
-        flex-wrap: wrap;
-      }
-      .explore-footer{
-        margin-top: 20px;
-      }
-      .sponsor-footer,
-      .follow-footer {
-        margin-top: 20px;
-      }
-      .sponsor-footer > div > li > svg {
-        width: 90px;
-        /* aspect-ratio: 1/2; */
-      }
-      .follow-footer > div {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-      /* border: 1px solid red; */
-    }
-      .follow-footer > div > li > span {
-        display: none;
-      }
-    }
-    
+.tickitz-footer {
+  grid-area: tickitz;
+  padding-left: 10px;
+}
+
+.explore-footer {
+  grid-area: explore;
+  padding-left: 10px;
+  /* color: var(--gray); */
+}
+.explore-footer div li a {
+  text-decoration: none;
+  color: var(--gray);
+  font-family: Mulish;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17.57px;
+  letter-spacing: 0.5px;
+}
+.explore-footer h5,
+.sponsor-footer h5,
+.follow-footer h5 {
+  font-size: 16px;
+}
+
+.sponsor-footer {
+  grid-area: sponsor;
+  padding-left: 10px;
+}
+.follow-footer {
+  grid-area: follow;
+  padding-left: 10px;
+}
+.follow-footer  li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: Mulish;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17.57px;
+  letter-spacing: 0.5px;
+}
+.copyright-footer {
+  grid-area: copyright;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+      " tickitz "
+      " explore "
+      " sponsor "
+      " follow "
+      " copyright "
+    ;
+  }
+  footer > ul > div {
+    display: flex; 
+    align-items: center;
+    gap: 15px; 
+    flex-wrap: wrap;
+  }
+  .explore-footer{
+    margin-top: 20px;
+  }
+  .sponsor-footer,
+  .follow-footer {
+    margin-top: 20px;
+  }
+  .sponsor-footer > div > li > svg {
+    width: 90px;
+  }
+  .follow-footer > div {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+  .follow-footer > div > li > span {
+    display: none;
+  }
+}
   </style>
 </head>
 <body>
@@ -121,10 +144,10 @@
     <ul class="explore-footer">
       <h5>Explore</h5>
       <div>
-        <li>Cinemas</li>
-        <li>Movie List</li>
-        <li>My Ticket</li>
-        <li>Notification</li>
+        <li><a href="#">Cinemas</a></li>
+        <li><a href="#">Movie List</a></li>
+        <li><a href="#">My Ticket</a></li>
+        <li><a href="#">Notification</a></li>
       </div>
     </ul>
     <ul class="sponsor-footer">

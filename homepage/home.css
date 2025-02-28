@@ -1,6 +1,6 @@
 :root {
   --white: #ffffff;
-  --lightgrey:#c6c8da;
+  --lightgrey:#6E7191;
   --gray: #4E4B66;
   --black: #121212;
   --blue: #1D4ED8;
@@ -12,6 +12,8 @@
     padding: 0;
     font-family: "Mulish", Verdana, Geneva, Tahoma, sans-serif;
   }
+
+/* NAVBAR */
   header > nav {
     border-bottom: 1px solid #DEDEDE
   }
@@ -22,6 +24,9 @@
     align-items: center;
     padding: 27px 20px;
   }
+  .nav-hamburger {
+    cursor: pointer;
+  }
   .isDisplayMobile {
     display: block;
   }
@@ -29,6 +34,195 @@
     display: none;
   }
 
+/* HERO */
+  .hero {
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 51px;
+    margin-bottom: 70px;
+    padding: 0 24px;
+  }
+  .hero .hero-desc {
+    border: 1px solid red;
+    min-width: 327px;
+    margin-bottom: 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero .hero-desc p:nth-child(1) {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 34px;
+    letter-spacing: 0.75px;
+    color: var(--blue);
+    text-align: center;
+  }
+
+  .hero .hero-desc p:nth-child(2) {
+    font-family: Mulish;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 45px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  
+  .hero .hero-desc p:nth-child(3) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.75px;
+    text-align: center;
+  }
+
+  .hero .hero-img {
+    display: grid;
+    grid-template-columns: 160px 160px;
+    grid-template-rows: 120px 40px 120px;
+    grid-template-areas: 
+      " hero1  hero2 "
+      " hero3  hero2 "
+      " hero3  hero4 "
+    ;
+    gap: 10px;
+  }
+  .hero .hero-img div {
+    background-size: cover;
+
+  }
+  .hero div div:first-child {
+    grid-area: hero1;
+    border-radius: 15px 15px 0 0;
+  }
+  .hero div div:nth-child(2) {
+    grid-area: hero2;
+    border-radius: 15px 15px 0 0;
+  }
+  .hero div div:nth-child(3) {
+    grid-area: hero3;
+    border-radius: 0 0 15px 15px;
+  }
+  .hero div div:last-child {
+    grid-area: hero4;
+    border-radius: 0 0 15px 15px;
+  }
+/* WHY CHOOSE US */
+/* MOVIES */
+/* UP COMING MOVIES */
+/* SUBSCRIBE */
+/* FOOTER */
+footer > ul {
+  list-style: none;
+}
+footer > ul h5 {
+  color: var(--black);
+  margin-bottom: 31px;
+}
+footer > p {
+  margin: 50px 0;
+}
+footer {
+  padding: 20px;
+  color: var(--lightgrey);
+  display: grid;
+  grid-template-columns: 1fr 250px 1fr 1fr;
+  grid-template-rows: 1fr 100px;
+  grid-template-areas: 
+  " tickitz  explore  sponsor  follow "
+  " copyright  copyright  copyright  copyright "
+  ;
+}
+
+.tickitz-footer {
+  grid-area: tickitz;
+  padding-left: 10px;
+}
+
+.explore-footer {
+  grid-area: explore;
+  padding-left: 10px;
+  /* color: var(--gray); */
+}
+.explore-footer div li a {
+  text-decoration: none;
+  color: var(--gray);
+  font-family: Mulish;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17.57px;
+  letter-spacing: 0.5px;
+}
+.explore-footer h5,
+.sponsor-footer h5,
+.follow-footer h5 {
+  font-size: 16px;
+}
+
+.sponsor-footer {
+  grid-area: sponsor;
+  padding-left: 10px;
+}
+.follow-footer {
+  grid-area: follow;
+  padding-left: 10px;
+}
+.follow-footer  li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: Mulish;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17.57px;
+  letter-spacing: 0.5px;
+}
+.copyright-footer {
+  grid-area: copyright;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+      " tickitz "
+      " explore "
+      " sponsor "
+      " follow "
+      " copyright "
+    ;
+  }
+  footer > ul > div {
+    display: flex; 
+    align-items: center;
+    gap: 15px; 
+    flex-wrap: wrap;
+  }
+  .explore-footer{
+    margin-top: 20px;
+  }
+  .sponsor-footer,
+  .follow-footer {
+    margin-top: 20px;
+  }
+  .sponsor-footer > div > li > svg {
+    width: 90px;
+  }
+  .follow-footer > div {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+  .follow-footer > div > li > span {
+    display: none;
+  }
+}
 @media screen and (min-width: 768px) {
   .isDisplayMobile {
     display: none;
@@ -37,7 +231,7 @@
     display: block;
   }
   
-  header  .wrapper {
+  header .wrapper {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -77,4 +271,16 @@
   .isLoginShow {
     display: none;
   }
+
+  /* HERO */
+  .hero .hero-desc {
+    width: 50%;
+  }
+  .hero .hero-desc p:nth-child(1),
+  .hero .hero-desc p:nth-child(2),
+  .hero .hero-desc p:nth-child(3),
+  .hero .hero-desc p:nth-child(4) {
+    text-align: start;
+  }
+
 } 

@@ -1,0 +1,80 @@
+:root {
+  --white: #ffffff;
+  --lightgrey:#c6c8da;
+  --gray: #4E4B66;
+  --black: #121212;
+  --blue: #1D4ED8;
+}
+
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Mulish", Verdana, Geneva, Tahoma, sans-serif;
+  }
+  header > nav {
+    border-bottom: 1px solid #DEDEDE
+  }
+  header > nav > ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 27px 20px;
+  }
+  .isDisplayMobile {
+    display: block;
+  }
+  .isDisplayDesktop {
+    display: none;
+  }
+
+@media screen and (min-width: 768px) {
+  .isDisplayMobile {
+    display: none;
+  }
+  .isDisplayDesktop {
+    display: block;
+  }
+  
+  header  .wrapper {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 27px 20px;
+    /* border: 1px solid red; */
+  }
+  header  nav  ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+  }
+  header nav ul li a {
+    text-decoration: none;
+  }
+
+  .nav-menu a {
+    color: var(--gray);
+  }
+  .signin-signup > li:first-child {
+    background-color: var(--blue);
+    padding: 12px 18px;
+    border-radius: 8px;
+  }
+  .signin-signup > li:first-child > a {
+    color: var(--white);
+  }
+  .signin-signup > li:nth-child(2) {
+    border: 1px solid var(--blue);
+    padding: 12px 18px;
+    border-radius: 8px;
+  }
+  .signin-signup > li:nth-child(2) > a {
+    color: var(--blue);
+  } 
+  .isLoginShow {
+    display: none;
+  }
+} 

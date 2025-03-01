@@ -325,6 +325,7 @@ header > nav > ul {
   background-color: var(--blue);
 }
 .subscribe p {
+  padding: 0 10px;
   font-weight: 400;
   font-size: 32px;
   line-height: 50px;

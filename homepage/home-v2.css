@@ -204,8 +204,8 @@ header > nav > ul {
   display: flex;
   gap: 20px;
   overflow-x: scroll;
+  /* position: relative; */
 }
-.movies-carousel div > a,
 .movies-carousel div > p:nth-child(2) {
   font-family: Mulish;
   font-weight: 700;
@@ -213,7 +213,6 @@ header > nav > ul {
   line-height: 34px;
   letter-spacing: 1px;
   color: var(--black);
-  text-decoration: none;
 }
 .movies-carousel div > p:nth-child(3) {
   font-weight: 700;
@@ -239,53 +238,8 @@ header > nav > ul {
   letter-spacing: 0.75px;
   text-align: center;
 }
-/* menu hover in each item */
-.movies-carousel div {
-  position: relative;
-}
-.movies-menu-hover {
-  display: none;
-}
-.movies-carousel div:hover .movies-menu-hover {
-  width: 240px;
-  height: 369px;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  background-color: #0000009a;
-  border-radius: 5px;
-}
-.movies-carousel .movies-menu-hover > button:nth-child(1) {
-  width: 188px;
-  height: 48px;
-  border-radius: 5px;
-  gap: 6px;
-  padding: 12px 18px;
-  border-width: 1px;
-  background-color: transparent;
-  color: var(--white);
-  border: 1px solid #ffffff;
-  cursor: pointer;
-}
-.movies-carousel .movies-menu-hover > button:nth-child(2) {
-  width: 188px;
-  height: 48px;
-  border-radius: 5px;
-  gap: 6px;
-  padding: 12px 18px;
-  border-width: 1px;
-  background-color: var(--blue);
-  color: var(--white);
-  cursor: pointer;
-  border-style: none;
-}
-.movies-carousel .movies-menu-hover > button:nth-child(1):hover,
-.movies-carousel .movies-menu-hover > button:nth-child(2):hover {
-  font-weight: bold;
-}
+
+
 /* SUBSCRIBE */
 .subscribe {
   display: flex;
@@ -317,7 +271,7 @@ header > nav > ul {
   background-color: #2563eb;
   color: var(--white);
   border-style: none;
-  outline: 1px solid #d4d4d8;
+  outline: 1px solid #D4D4D8;
 }
 .subscribe form div input::placeholder {
   color: var(--white);
@@ -477,12 +431,12 @@ footer > ul > div {
     text-align: start;
   }
 
-  /* SUBSCRIBE */
-  .subscribe form {
-    flex-direction: row;
-  }
+/* SUBSCRIBE */
+.subscribe form {
+  flex-direction: row;
+}
 
-  /* FOOTER */
+/* FOOTER */
   footer > ul {
     list-style: none;
   }

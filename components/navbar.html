@@ -68,21 +68,31 @@
   .nav-menu a {
     color: var(--gray);
   }
-  .signin-signup > li:first-child {
+  .signin-signup > a:first-child {
     background-color: var(--blue);
     padding: 12px 18px;
     border-radius: 8px;
+    text-decoration: none;
   }
-  .signin-signup > li:first-child > a {
+  .signin-signup > a:first-child:hover {
+    background-color: #1d4fd8c5;
+  }
+  .signin-signup > a:first-child > li {
     color: var(--white);
   }
-  .signin-signup > li:nth-child(2) {
+  .signin-signup > a:nth-child(2) {
     border: 1px solid var(--blue);
+    color: var(--blue);
     padding: 12px 18px;
     border-radius: 8px;
+    text-decoration: none;
   }
-  .signin-signup > li:nth-child(2) > a {
+  .signin-signup > a:nth-child(2) > li {
     color: var(--blue);
+  }
+  .signin-signup > a:nth-child(2):hover {
+    background-color: #1d4fd84f;
+    color: var(--white);
   } 
   .isLoginShow {
     display: none;
@@ -131,12 +141,8 @@
           <li><img src="./profile-picture.png" alt="profile-picture"></li>
         </ul>
         <ul class="signin-signup">
-          <li>
-            <a href="../login/login.html">Sign In</a>
-          </li>
-          <li>
-            <a href="../register/register.html">Sign Up</a>
-          </li>
+          <a href="../login/login.html"><li>Sign In</li></a>
+          <a href="../register/register.html">Sign Up</a>
         </ul>
       </div>
     </nav>

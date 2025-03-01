@@ -239,10 +239,39 @@ header > nav > ul {
   letter-spacing: 0.75px;
   text-align: center;
 }
-/* menu hover in each item */
 .movies-carousel div {
   position: relative;
 }
+
+/* ribbon */
+.movies-carousel div > span {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 135px;
+  height: 25px;
+  background: var(--blue);
+  border-radius: 30px;
+  border-bottom-left-radius:0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  text-align: center;
+  color: var(--white);
+}
+.movies-carousel div > span::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: #163899;
+  transform: rotate(45deg);
+  z-index: -12222;
+  left: 12px;
+  top: -5px;
+}
+/* menu hover in each item */
 .movies-menu-hover {
   display: none;
 }
@@ -258,7 +287,7 @@ header > nav > ul {
   background-color: #0000009a;
   border-radius: 5px;
 }
-.movies-carousel .movies-menu-hover > button:nth-child(1) {
+.movies-carousel .movies-menu-hover a:nth-child(1)  button {
   width: 188px;
   height: 48px;
   border-radius: 5px;
@@ -270,7 +299,7 @@ header > nav > ul {
   border: 1px solid #ffffff;
   cursor: pointer;
 }
-.movies-carousel .movies-menu-hover > button:nth-child(2) {
+.movies-carousel .movies-menu-hover a:nth-child(2) button {
   width: 188px;
   height: 48px;
   border-radius: 5px;
@@ -282,8 +311,8 @@ header > nav > ul {
   cursor: pointer;
   border-style: none;
 }
-.movies-carousel .movies-menu-hover > button:nth-child(1):hover,
-.movies-carousel .movies-menu-hover > button:nth-child(2):hover {
+.movies-carousel .movies-menu-hover > a:nth-child(1) button:hover,
+.movies-carousel .movies-menu-hover > a:nth-child(2) button:hover {
   font-weight: bold;
 }
 /* SUBSCRIBE */

@@ -174,7 +174,7 @@ header > nav > ul {
   text-align: center;
 }
 
-/* MOVIES */
+/* MOVIES & UP COMING MOVIES */
 .movies {
   display: flex;
   flex-direction: column;
@@ -238,8 +238,57 @@ header > nav > ul {
   text-align: center;
 }
 
-/* UP COMING MOVIES */
 /* SUBSCRIBE */
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 37px;
+  padding: 61px 0;
+  background-color: var(--blue);
+}
+.subscribe p {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: var(--white);
+}
+.subscribe form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 30px;
+}
+.subscribe form div input {
+  width: 264px;
+  height: 60px;
+  border-radius: 5px;
+  padding: 0 10px;
+  background-color: #2563eb;
+  color: var(--white);
+  border-style: none;
+  outline: 1px solid #D4D4D8;
+}
+.subscribe form div input::placeholder {
+  color: var(--white);
+}
+.subscribe form div input:focus {
+  outline: 2px solid var(--white);
+}
+.subscribe form button {
+  width: 264px;
+  height: 60px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  color: var(--blue);
+  cursor: pointer;
+}
+
 /* FOOTER */
 footer {
   display: grid;
@@ -380,7 +429,12 @@ footer > ul > div {
     text-align: start;
   }
 
-  /* FOOTER */
+/* SUBSCRIBE */
+.subscribe form {
+  flex-direction: row;
+}
+
+/* FOOTER */
   footer > ul {
     list-style: none;
   }

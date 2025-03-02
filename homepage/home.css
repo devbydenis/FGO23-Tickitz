@@ -200,10 +200,24 @@ header > nav > ul {
   text-align: center;
   color: var(--black);
 }
+.movies a {
+  margin-top: 35px;
+  font-family: Mulish;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 34px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-align: center;
+}
 .movies-carousel {
   display: flex;
   gap: 20px;
   overflow-x: scroll;
+}
+.movies-carousel div > a {
+  display: block;
+  text-align: start;
 }
 .movies-carousel div > a,
 .movies-carousel div > p:nth-child(2) {
@@ -252,7 +266,7 @@ header > nav > ul {
   height: 25px;
   background: var(--blue);
   border-radius: 30px;
-  border-bottom-left-radius:0;
+  border-bottom-left-radius: 0;
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
@@ -287,7 +301,7 @@ header > nav > ul {
   background-color: #0000009a;
   border-radius: 5px;
 }
-.movies-carousel .movies-menu-hover a:nth-child(1)  button {
+.movies-carousel .movies-menu-hover a:nth-child(1) button {
   width: 188px;
   height: 48px;
   border-radius: 5px;
@@ -315,6 +329,7 @@ header > nav > ul {
 .movies-carousel .movies-menu-hover > a:nth-child(2) button:hover {
   font-weight: bold;
 }
+
 /* SUBSCRIBE */
 .subscribe {
   display: flex;
@@ -419,6 +434,10 @@ footer > ul > div {
 }
 
 @media screen and (min-width: 768px) {
+  body {
+    border: 1px solid red;
+  }
+
   .isDisplayMobile {
     display: none;
   }
@@ -489,6 +508,11 @@ footer > ul > div {
   }
 
   /* WHY CHOOSE US */
+  .why-choose-us {
+    display: flex;
+    flex-direction: column;
+    margin: 0 150px;
+  }
   .why-choose-us h2,
   .why-choose-us h3 {
     text-align: start;
@@ -499,6 +523,11 @@ footer > ul > div {
 
   .why-choose-us ul {
     flex-direction: row;
+  }
+
+  /* MOVIES */
+  .movies {
+    margin: 62px 150px;
   }
 
   /* UP COMING MOVIES */

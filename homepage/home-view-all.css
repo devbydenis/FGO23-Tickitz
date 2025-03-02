@@ -92,12 +92,115 @@ header > nav > ul {
   text-align: center;
   color: var(--black);
 }
+.movies a {
+  margin-top: 35px;
+  font-family: Mulish;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 34px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-align: center;
+}
+.movies form {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  margin: 20px 0 0 0;
+  padding: 0 150px;
+}
+.movies form .movies-search {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--gray);
+  font-family: Mulish;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20.08px;
+  letter-spacing: 0%;
+}
+.movies .movies-search span {
+  border: 1px solid #DEDEDE;
+  border-radius: 5px;
+  width: 340px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 10px;
+}
+.movies .movies-search span input {
+  border-style: none;
+  font-size: 16px;
+}
+.movies .movies-search span input:focus {
+  outline-style: none;
+}
+.movies form .movies-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.filter-container {
+  display: flex;
+  gap: 10px;
+
+}
+.filter-button {
+  font-family: Nunito;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  display: block;
+  margin: 5px 0;
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+  color: var(--white);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Style saat tombol dihover */
+.filter-button:hover {
+  opacity: .5;
+  transition: 0.3s;
+}
+
+/* Style saat checkbox dipilih (background berubah) */
+.filter-button input:checked ~ span {
+  background-color: var(--white);
+  color: var(--blue); /* Teks berubah menjadi putih agar mudah dibaca */
+}
+
+/* Style untuk menyembunyikan checkbox default */
+.filter-button input {
+  display: none;
+}
+
+/* Style untuk teks di dalam tombol */
+.filter-button span {
+  display: block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
 .movies-carousel {
   display: flex;
+  justify-content: center;
   gap: 20px;
   overflow-x: scroll;
-  /* position: relative; */
+  margin-top: 20px;
 }
+.movies-carousel div > a {
+  display: block;
+  text-align: start;
+}
+.movies-carousel div > a,
 .movies-carousel div > p:nth-child(2) {
   font-family: Mulish;
   font-weight: 700;
@@ -105,6 +208,7 @@ header > nav > ul {
   line-height: 34px;
   letter-spacing: 1px;
   color: var(--black);
+  text-decoration: none;
 }
 .movies-carousel div > p:nth-child(3) {
   font-weight: 700;
@@ -130,6 +234,83 @@ header > nav > ul {
   letter-spacing: 0.75px;
   text-align: center;
 }
+.movies-carousel div {
+  position: relative;
+}
+
+/* ribbon */
+.movies-carousel div > span {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 135px;
+  height: 25px;
+  background: var(--blue);
+  border-radius: 30px;
+  border-bottom-left-radius: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  text-align: center;
+  color: var(--white);
+}
+.movies-carousel div > span::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: #163899;
+  transform: rotate(45deg);
+  z-index: -12222;
+  left: 12px;
+  top: -5px;
+}
+/* menu hover in each item */
+.movies-menu-hover {
+  display: none;
+}
+.movies-carousel div:hover .movies-menu-hover {
+  width: 240px;
+  height: 369px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 10px; */
+  background-color: #0000009a;
+  border-radius: 5px;
+}
+.movies-carousel .movies-menu-hover a:nth-child(1) button {
+  width: 188px;
+  height: 48px;
+  border-radius: 5px;
+  gap: 6px;
+  padding: 12px 18px;
+  border-width: 1px;
+  background-color: transparent;
+  color: var(--white);
+  border: 1px solid #ffffff;
+  cursor: pointer;
+}
+.movies-carousel .movies-menu-hover a:nth-child(2) button {
+  width: 188px;
+  height: 48px;
+  border-radius: 5px;
+  gap: 6px;
+  padding: 12px 18px;
+  border-width: 1px;
+  background-color: var(--blue);
+  color: var(--white);
+  cursor: pointer;
+  border-style: none;
+}
+.movies-carousel .movies-menu-hover > a:nth-child(1) button:hover,
+.movies-carousel .movies-menu-hover > a:nth-child(2) button:hover {
+  font-weight: bold;
+}
+
 
 /* SUBSCRIBE */
 .subscribe {
@@ -181,6 +362,34 @@ header > nav > ul {
   color: var(--blue);
   cursor: pointer;
 }
+/* Pagination */
+.pagination {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 62px 0;
+}
+.pagination button:nth-child(1),
+.pagination button:last-child {
+  background-color: var(--blue);
+  color: var(--white);
+}
+.pagination button {
+  font-family: Nunito;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 50%;
+  border-style: none;
+  cursor: pointer;
+  color: var(--lightgrey);
+}
 
 /* FOOTER */
 footer {
@@ -231,6 +440,23 @@ footer > ul > div {
 }
 .follow-footer > div > li > span {
   display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .banner > .tagline {
+    padding:  0 20px;
+  }
+
+  .movies form {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .movies-carousel {
+    justify-content: start;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -303,25 +529,10 @@ footer > ul > div {
     text-align: start;
   }
 
-  /* WHY CHOOSE US */
-  .why-choose-us h2,
-  .why-choose-us h3 {
-    text-align: start;
-  }
-  .why-choose-us h3 {
-    width: 640px;
-  }
-
-  .why-choose-us ul {
-    flex-direction: row;
-  }
-
-  /* UP COMING MOVIES */
-  .up-coming-movies h2,
-  .up-coming-movies h3 {
-    text-align: start;
-  }
-
+  /* .movies {
+    margin: 0 150px;
+  } */
+  
   /* SUBSCRIBE */
   .subscribe form {
     flex-direction: row;

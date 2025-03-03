@@ -1,3 +1,494 @@
+:root {
+  --white: #ffffff;
+  --lightgrey: #6e7191;
+  --gray: #4e4b66;
+  --black: #121212;
+  --blue: #1d4ed8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Mulish", Verdana, Geneva, Tahoma, sans-serif;
+}
+ul li {
+  list-style: none;
+}
+
+/* NAVBAR //////////////////////////////////////////////////// */
+header > nav {
+  border-bottom: 1px solid #dedede;
+}
+header > nav > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 27px 20px;
+}
+.nav-hamburger {
+  cursor: pointer;
+}
+.isDisplayMobile {
+  display: block;
+}
+.isDisplayDesktop {
+  display: none;
+}
+
+/* Banner  //////////////////////////////////////////////////// */
+main section {
+  border: 1px solid red;
+}
+
+.banner {
+  height: 475px;
+  background-image: url("../assets/background-detail.png");
+  background-size: cover;
+  background-position: 80% 0;
+  filter: brightness(50%);
+}
+
+/* film-information //////////////////////////////////////////////////// */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 250px 500px 350px 1fr;
+  grid-template-areas:
+    " banner "
+    " footage "
+    " film-informations "
+    " synopsis "
+    " showtimes-tickets "
+    " pagination ";
+}
+.banner {
+  grid-area: banner;
+}
+
+/* film-information //////////////////////////////////////////////////// */
+.footage {
+  grid-area: footage;
+  z-index: 1;
+  display: flex;
+  justify-self: center;
+  /* transform: translateY(-30%); */
+}
+
+/* film-information //////////////////////////////////////////////////// */
+.film-informations {
+  grid-area: film-informations;
+  padding: 32px 24px 41px;
+}
+.film-informations h1 {
+  font-family: Mulish;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.75px;
+  text-align: center;
+}
+.film-informations .genre {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  /* margin: 25px 0; */
+}
+.film-informations .genre li {
+  background: #a0a3bd1a;
+  width: 110px;
+  height: 31px;
+  border-radius: 20px;
+  gap: 10px;
+  padding: 12px 25px;
+  font-family: Mulish;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  text-align: center;
+}
+.film-informations .more {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.film-informations .more p:nth-child(1) {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: 0.75px;
+  color: var(--lightgrey);
+}
+.film-informations .more p:nth-child(2) {
+  width: 153px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  color: var(--black);
+}
+
+/* Synopsis //////////////////////////////////////////////////// */
+.synopsis {
+  grid-area: synopsis;
+  padding: 0 24px;
+}
+.synopsis h3 {
+  margin-bottom: 10px;
+  font-family: Mulish;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 34px;
+  letter-spacing: 0.5px;
+}
+.synopsis p {
+  font-family: Mulish;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0.75px;
+  color: var(--lightgrey);
+}
+
+/* Showtimes-tickets //////////////////////////////////////////////////// */
+.showtimes-tickets form {
+  grid-area: showtimes-tickets;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.showtimes-tickets form h3 {
+  font-family: Mulish;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 34px;
+  letter-spacing: 0.75px;
+  margin-top: 41px;
+}
+.showtimes-tickets .date input {
+  width: 327px;
+  height: 48px;
+  padding: 0 10px;
+  background-color: #eff0f6;
+  border-style: none;
+  border-radius: 8px;
+  margin: 22px 0 12px;
+  cursor: pointer;
+}
+.showtimes-tickets .city select {
+  width: 347px;
+  height: 48px;
+  padding: 0 10px;
+  background-color: #eff0f6;
+  border-style: none;
+  border-radius: 8px;
+  margin-bottom: 22px;
+}
+.showtimes-tickets button {
+  width: 347px;
+  height: 48px;
+  padding: 0 10px;
+  background-color: var(--blue);
+  color: white;
+  border-style: none;
+  border-radius: 8px;
+  font-family: Mulish;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  text-align: center;
+}
+.showtimes-tickets form p {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: var(--lightgrey);
+  margin: 12px 0 21px;
+}
+.showtimes-tickets .cinema {
+  margin: 0 24px;
+  padding: 12px 17px;
+  border: 2px solid #dedede;
+  border-radius: 8px;
+}
+
+.showtimes-tickets .cinema p {
+  font-family: Mulish;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.75px;
+  color: var(--lightgrey);
+}
+.showtimes-tickets .dropdown-head {
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  grid-template-rows: repeat(3, 40px);
+  grid-template-areas:
+    " theater  . "
+    " theater-two  dropdown-button "
+    " address  . ";
+  align-items: center;
+}
+.dropdown-head .theater {
+  grid-area: theater;
+}
+.dropdown-head .theater-two {
+  grid-area: theater-two;
+}
+.dropdown-head p {
+  grid-area: address;
+}
+.dropdown-head button {
+  grid-area: dropdown-button;
+  background-color: transparent;
+  border-style: none;
+  width: 63px;
+  height: 63px;
+}
+.showtimes-tickets .dropdown-contain div p {
+  font-family: Mulish;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 34px;
+  letter-spacing: 0.5px;
+  color: var(--black);
+  margin: 28px 0;
+}
+.showtimes-tickets .dropdown-contain div ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-right: 106px;
+}
+.showtimes-tickets .dropdown-contain div ul li {
+  width: 88px;
+  height: 31px;
+  font-family: Mulish;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #eff0f6;
+}
+
+/* Pagination //////////////////////////////////////////////////// */
+.pagination {
+  grid-area: pagination;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 62px 0;
+}
+.pagination button:nth-child(1),
+.pagination button:last-child {
+  background-color: var(--blue);
+  color: var(--white);
+}
+.pagination button {
+  font-family: Nunito;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 50%;
+  border-style: none;
+  cursor: pointer;
+  color: var(--lightgrey);
+}
+
+/* FOOTER //////////////////////////////////////////////////// */
+footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    " tickitz "
+    " explore "
+    " sponsor "
+    " follow "
+    " copyright ";
+  padding: 64px 24px;
+}
+footer ul {
+  list-style: none;
+}
+footer ul h5 {
+  margin-bottom: 16px;
+}
+footer p {
+  color: var(--lightgrey);
+}
+footer > ul > div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.explore-footer {
+  margin-top: 20px;
+}
+.explore-footer div li a {
+  text-decoration: none;
+  color: var(--lightgrey);
+}
+.sponsor-footer,
+.follow-footer {
+  margin-top: 20px;
+}
+.sponsor-footer > div > li > svg {
+  width: 90px;
+}
+.follow-footer > div {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.follow-footer  div > li > span {
+  display: none;
+}
+
+
 @media screen and (min-width: 768px) {
-  
+  /* <<<<< Footer -Desktop >>>>> */
+  footer > ul {
+    list-style: none;
+  }
+  footer > ul h5 {
+    color: var(--black);
+    margin-bottom: 31px;
+  }
+  footer > p {
+    margin: 50px 0;
+  }
+  footer {
+    padding: 20px;
+    color: var(--lightgrey);
+    display: grid;
+    grid-template-columns: 1fr 250px 1fr 1fr;
+    grid-template-rows: 1fr 100px;
+    grid-template-areas:
+      " tickitz  explore  sponsor  follow "
+      " copyright  copyright  copyright  copyright ";
+  }
+
+  .tickitz-footer {
+    grid-area: tickitz;
+    padding-left: 10px;
+  }
+
+  .explore-footer {
+    grid-area: explore;
+    padding-left: 10px;
+    /* color: var(--gray); */
+  }
+  .explore-footer div li a {
+    text-decoration: none;
+    color: var(--gray);
+    font-family: Mulish;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17.57px;
+    letter-spacing: 0.5px;
+  }
+  .explore-footer h5,
+  .sponsor-footer h5,
+  .follow-footer h5 {
+    font-size: 16px;
+  }
+
+  .sponsor-footer {
+    grid-area: sponsor;
+    padding-left: 10px;
+  }
+  .follow-footer {
+    grid-area: follow;
+    padding-left: 10px;
+  }
+  .follow-footer li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: Mulish;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17.57px;
+    letter-spacing: 0.5px;
+  }
+  .copyright-footer {
+    grid-area: copyright;
+    display: flex;
+    justify-content: center;
+  }
+}
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||| */
+
+@media screen and (min-width: 768px) {
+  .isDisplayMobile {
+    display: none;
+  }
+  .isDisplayDesktop {
+    display: block;
+  }
+
+  header .wrapper {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 27px 20px;
+  }
+  header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+  }
+  header nav ul li a {
+    text-decoration: none;
+  }
+
+  .nav-menu a {
+    color: var(--gray);
+  }
+  .signin-signup > a:first-child {
+    background-color: var(--blue);
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  .signin-signup > a:first-child:hover {
+    background-color: #1d4fd8c5;
+  }
+  .signin-signup > a:first-child > li {
+    color: var(--white);
+  }
+  .signin-signup > a:nth-child(2) {
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  .signin-signup > a:nth-child(2) > li {
+    color: var(--blue);
+  }
+  .signin-signup > a:nth-child(2):hover {
+    background-color: #1d4fd84f;
+    color: var(--white);
+  }
+  .isLoginShow {
+    display: none;
+  }
 }

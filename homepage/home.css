@@ -36,7 +36,6 @@ header > nav > ul {
 
 /* HERO */
 .hero {
-  /* border: 1px solid red; */
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -46,7 +45,6 @@ header > nav > ul {
   padding: 0 24px;
 }
 .hero .hero-desc {
-  /* border: 1px solid red; */
   min-width: 327px;
   margin-bottom: 19px;
   display: flex;
@@ -209,6 +207,11 @@ header > nav > ul {
   letter-spacing: 1px;
   text-decoration: none;
   text-align: center;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 .movies-carousel {
   display: flex;
@@ -429,14 +432,11 @@ footer > ul > div {
   align-items: center;
   gap: 25px;
 }
-.follow-footer > div > li > span {
+.follow-footer  div > li > span {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    border: 1px solid red;
-  }
 
   .isDisplayMobile {
     display: none;
@@ -452,7 +452,6 @@ footer > ul > div {
     justify-content: space-between;
     align-items: center;
     padding: 27px 20px;
-    /* border: 1px solid red; */
   }
   header nav ul {
     display: flex;
@@ -497,8 +496,18 @@ footer > ul > div {
   }
 
   /* HERO */
+  .hero {
+    margin: 51px 150px 70px;
+    justify-content: space-between;
+    padding: 0 100px;
+  }
   .hero .hero-desc {
     width: 50%;
+  }
+  .hero .hero-img{
+    grid-template-columns: 217px 218px;
+    grid-template-rows: 170px 80px 250px;
+    gap: 10px;
   }
   .hero .hero-desc p:nth-child(1),
   .hero .hero-desc p:nth-child(2),
@@ -506,12 +515,20 @@ footer > ul > div {
   .hero .hero-desc p:nth-child(4) {
     text-align: start;
   }
+  .hero .hero-desc p:nth-child(2){
+    font-family: Mulish;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 70px;
+    letter-spacing: 1px;
+  }
 
   /* WHY CHOOSE US */
   .why-choose-us {
     display: flex;
     flex-direction: column;
     margin: 0 150px;
+    padding: 0 100px;
   }
   .why-choose-us h2,
   .why-choose-us h3 {
@@ -528,6 +545,12 @@ footer > ul > div {
   /* MOVIES */
   .movies {
     margin: 62px 150px;
+    padding: 0 100px;
+  }
+
+  .movies-carousel div:hover .movies-menu-hover{
+    width: 264px;
+    height: 405px;
   }
 
   /* UP COMING MOVIES */

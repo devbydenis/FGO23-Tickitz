@@ -408,6 +408,7 @@ footer > ul > div {
     font-weight: 700;
     font-size: 32px;
     letter-spacing: 1px;
+    margin-bottom: 20px;
   }
   .film-informations .more {
     justify-content: start;

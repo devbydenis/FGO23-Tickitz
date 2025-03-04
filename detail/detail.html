@@ -202,7 +202,7 @@
                 </svg>
               </div>
               <p>Whatever street No.12, South Purwokerto</p>
-              <button>
+              <button type="button" id="cinema-one">
                 <svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 8L9 1L17 8" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>                  
@@ -331,4 +331,15 @@
       <p class="copyright-footer">&copy; 2020 Tickitz. All Rights Reserved</p>
     </footer>
   </body>
+  <script>
+    const dropdownHead = document.querySelector(".dropdown-head")
+    const dropdownContain = document.querySelector(".dropdown-contain")
+    const button = dropdownHead.querySelector("#cinema-one")
+    const li = document.querySelector(".showtimes-tickets .dropdown-contain div ul li")
+
+    button.addEventListener('click', () => {
+      dropdownContain.classList.toggle('hide-dropdown')
+      button.classList.toggle('rotate-button')
+    })
+  </script>
 </html>

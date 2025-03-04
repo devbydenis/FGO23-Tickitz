@@ -39,7 +39,7 @@ header > nav > ul {
 
 /* Banner  //////////////////////////////////////////////////// */
 main section {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .banner {
@@ -250,6 +250,14 @@ main {
   border-style: none;
   width: 63px;
   height: 63px;
+  cursor: pointer;
+}
+
+.hide-dropdown {
+  display: none;
+}
+.rotate-button {
+  transform: rotate(180deg);
 }
 .showtimes-tickets .dropdown-contain div p {
   font-family: Mulish;
@@ -277,6 +285,7 @@ main {
   text-align: center;
   border-radius: 20px;
   background-color: #eff0f6;
+  cursor: pointer;
 }
 
 /* Pagination //////////////////////////////////////////////////// */
@@ -287,8 +296,7 @@ main {
   gap: 20px;
   margin: 62px 0;
 }
-.pagination button:nth-child(1),
-.pagination button:last-child {
+.pagination button:nth-child(1){
   background-color: var(--blue);
   color: var(--white);
 }
@@ -302,7 +310,7 @@ main {
   width: 40px;
   height: 40px;
   background-color: transparent;
-  border-radius: 50%;
+  border-radius: 20%;
   border-style: none;
   cursor: pointer;
   color: var(--lightgrey);

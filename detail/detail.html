@@ -179,7 +179,7 @@
           </div>
           <button type="button">Filter</button>
           <!-- change to submit type -->
-          <p>39 Results</p>
+          <p class="result">39 Results</p>
         </form>
         <div class="cinema">
           <div class="dropdown">
@@ -249,6 +249,8 @@
         <button>2</button>
         <button>3</button>
         <button>4</button>
+        <div>
+        </div>
       </section>
     </main>
     <footer>
@@ -335,11 +337,16 @@
     const dropdownHead = document.querySelector(".dropdown-head")
     const dropdownContain = document.querySelector(".dropdown-contain")
     const button = dropdownHead.querySelector("#cinema-one")
-    const li = document.querySelector(".showtimes-tickets .dropdown-contain div ul li")
+    const ul = document.querySelectorAll(".showtimes-tickets .dropdown-contain div ul")
+    const li = document.querySelectorAll(".showtimes-tickets .dropdown-contain div ul li")
 
     button.addEventListener('click', () => {
       dropdownContain.classList.toggle('hide-dropdown')
       button.classList.toggle('rotate-button')
     })
+
+    // li.addEventListener('click', () => {
+
+    // })
   </script>
 </html>

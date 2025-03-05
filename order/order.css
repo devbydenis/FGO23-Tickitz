@@ -1,0 +1,250 @@
+:root {
+  --white: #ffffff;
+  --lightgrey: #6e7191;
+  --gray: #4e4b66;
+  --black: #121212;
+  --blue: #1d4ed8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Mulish", Verdana, Geneva, Tahoma, sans-serif;
+}
+header > nav {
+  border-bottom: 1px solid #dedede;
+}
+header > nav > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 27px 20px;
+}
+.nav-logo,
+.wrapper svg {
+  cursor: pointer;
+}
+.isDisplayMobile {
+  display: block;
+}
+.isDisplayDesktop {
+  display: none;
+}
+
+/* FOOTER */
+footer {
+  display: grid;
+  padding: 64px 24px;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    " tickitz "
+    " explore "
+    " sponsor "
+    " follow "
+    " copyright ";
+}
+footer > ul > div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+h5 {
+  font-family: Mulish;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  color: var(--black);
+}
+.tickitz-footer p {
+  color: var(--lightgrey);
+  font-family: Mulish;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  width: 260px;
+}
+.explore-footer {
+  margin-top: 20px;
+  font-family: Mulish;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0.75px;
+}
+.explore-footer a {
+  font-family: Mulish;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: var(--lightgrey);
+}
+.sponsor-footer,
+.follow-footer {
+  margin-top: 20px;
+}
+.sponsor-footer > div > li > svg {
+  width: 90px;
+}
+.follow-footer > div {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.follow-footer > div > li > span {
+  display: none;
+}
+.copyright-footer {
+  grid-area: copyright;
+  display: flex;
+  align-items: center;
+}
+
+/* MQ For  */
+@media screen and (min-width: 768px) {
+  /* NAVBAR */
+  .isDisplayMobile {
+    display: none;
+  }
+  .isDisplayDesktop {
+    display: block;
+  }
+
+  header .wrapper {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 27px 20px;
+    /* border: 1px solid red; */
+  }
+  header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+  }
+  header nav ul li a {
+    text-decoration: none;
+  }
+  .nav-menu a {
+    color: var(--gray);
+  }
+  .nav-menu a:hover {
+    border-bottom: 2px solid rgb(91, 86, 86);
+  }
+  .signin-signup > a:first-child {
+    background-color: var(--blue);
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  .signin-signup > a:first-child:hover {
+    background-color: #1d4fd8c5;
+  }
+  .signin-signup > a:first-child > li {
+    color: var(--white);
+  }
+  .signin-signup > a:nth-child(2) {
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  .signin-signup > a:nth-child(2) > li {
+    color: var(--blue);
+  }
+  .signin-signup > a:nth-child(2):hover {
+    background-color: #7fa1ff4f;
+    color: #1d4ed8;
+  }
+  .isLoginShow {
+    display: none;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid rgba(211, 211, 211, 0.123);
+  }
+  footer > ul {
+    list-style: none;
+  }
+  footer > ul h5 {
+    color: var(--black);
+    margin-bottom: 31px;
+  }
+  footer > p {
+    margin: 50px 0;
+  }
+  footer {
+    color: var(--lightgrey);
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-template-rows: 1fr 100px;
+    grid-template-areas:
+      " tickitz  explore  sponsor  follow "
+      " copyright  copyright  copyright  copyright ";
+    justify-content: center;
+    column-gap: 50px;
+  }
+
+  .tickitz-footer {
+    grid-area: tickitz;
+    padding-left: 10px;
+  }
+
+  .explore-footer {
+    grid-area: explore;
+    padding-left: 10px;
+    /* color: var(--gray); */
+  }
+  .explore-footer div li a {
+    text-decoration: none;
+    color: var(--gray);
+    font-family: Mulish;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17.57px;
+    letter-spacing: 0.5px;
+  }
+  .explore-footer h5,
+  .sponsor-footer h5,
+  .follow-footer h5 {
+    font-size: 16px;
+  }
+
+  .sponsor-footer {
+    grid-area: sponsor;
+    padding-left: 10px;
+  }
+  .follow-footer {
+    grid-area: follow;
+    padding-left: 10px;
+  }
+  .follow-footer li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: Mulish;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17.57px;
+    letter-spacing: 0.5px;
+  }
+  .copyright-footer {
+    justify-content: center;
+  }
+}

@@ -38,6 +38,7 @@ main {
   background: #a0a3bd33;
   display: grid;
   grid-template-columns: 1fr;
+  position: relative;
 }
 
 /* ORDER HEAD */
@@ -127,8 +128,6 @@ form {
 }
 
 /* ORDER-CHOOSE-SEAT */
-.order-choose-seat {
-}
 .order-choose-seat p {
   font-family: Mulish;
   font-weight: 600;
@@ -144,7 +143,8 @@ form {
 
 /* ORDER SEATING KEY */
 .order-seating-key {
-  padding: 10px 20px;
+  padding: 10px;
+  margin: 0 50px;
 }
 .order-seating-key > p {
   font-family: Mulish;
@@ -189,6 +189,8 @@ form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 0 30px;
+  border: 1px solid red;
 }
 .order-choosed span {
   display: flex;
@@ -252,6 +254,77 @@ form {
   cursor: pointer;
 }
 
+/* CONFIRM ORDER */
+.confirm-order {
+  /* position: absolute; */
+  background-color: var(--white);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 80px 60px;
+  margin: 20px;
+}
+.confirm-order > p {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: 0.75px;
+  text-align: center;
+  vertical-align: middle;
+  margin: 30px 0;
+}
+.confirm-order table {
+  border-collapse: collapse;
+}
+.confirm-order table th,
+.confirm-order table th {
+  padding-top: 10px;
+}
+.confirm-order table th {
+  text-align: start;
+  color: #6B6B6B;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  vertical-align: middle;
+}
+.confirm-order table td {
+  text-align: end;
+  padding-left: 30px;
+}
+.confirm-order table tr:last-child th {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 34px;
+  letter-spacing: 0.75px;
+  vertical-align: middle;
+  color: var(--black);
+}
+.confirm-order table tr:nth-child(5) th,
+.confirm-order table tr:nth-child(5) td{
+  padding-top: 10px;
+  border-bottom: 1px solid #6b6b6b43;
+}
+.confirm-order button {
+  font-family: Mulish;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  text-align: center;
+  vertical-align: middle;
+  border-style: none;
+  color: var(--white);
+  background-color: var(--blue);
+  border-radius: 8px;
+  padding: 10px 25px;
+  margin: 60px 0 60px;
+  width: 100%;
+  cursor: pointer;
+
+}
 /* FOOTER */
 footer {
   display: grid;
@@ -331,7 +404,10 @@ h5 {
   align-items: center;
 }
 
-/* MQ For  */
+@media screen and (min-width: 768px) {
+}
+
+/* MQ For  Navbar & Footer*/
 @media screen and (min-width: 768px) {
   /* NAVBAR */
   .isDisplayMobile {

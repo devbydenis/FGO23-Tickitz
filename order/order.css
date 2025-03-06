@@ -45,7 +45,7 @@ form {
   background-color: var(--white);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 400px 200px 1fr;
+  grid-template-rows: 1fr 400px 200px 250px 56px;
   grid-template-areas:
     " order-head "
     " order-choose-seat "
@@ -112,7 +112,6 @@ form {
   line-height: 24px;
   letter-spacing: 0.75px;
   color: #a0a3bd;
-  /* border: 1px solid red; */
 }
 .order-change {
   padding: 0 25px;
@@ -139,7 +138,6 @@ form {
   margin: 41px 0 36px;
 }
 .order-seat {
-  /* border: 1px solid red; */
   max-width: 300px;
   overflow-x: scroll;
 }
@@ -188,6 +186,9 @@ form {
 /* ORDER CHOOSED */
 .order-choosed {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .order-choosed span {
   display: flex;
@@ -203,15 +204,52 @@ form {
   vertical-align: middle;
 }
 .order-choosed span p:nth-child(1) {
-color: var(--lightgrey);
+  color: var(--lightgrey);
 }
-.order-choosed span p:nth-child(2){
-color: var(--black);
+.order-choosed span p:nth-child(2) {
+  color: var(--black);
 }
 .order-choosed select {
   width: 120px;
   height: 56px;
   padding: 0 10px;
+}
+.order-choosed button {
+  font-family: Mulish;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  text-align: center;
+  vertical-align: middle;
+  border-style: none;
+  color: var(--blue);
+  background-color: white;
+  outline: 1px solid var(--blue);
+  border-radius: 8px;
+  padding: 10px 25px;
+  margin: 0 25px;
+  cursor: pointer;
+}
+
+/* ORDER SUBMIT */
+.order-submit {
+  width: 100%;
+  font-family: Mulish;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  text-align: center;
+  vertical-align: middle;
+  border-style: none;
+  color: var(--white);
+  background-color: var(--blue);
+  outline: 1px solid var(--blue);
+  border-radius: 5px;
+  padding: 10px 25px;
+  margin: 0 25px;
+  cursor: pointer;
 }
 
 /* FOOTER */
@@ -310,7 +348,6 @@ h5 {
     justify-content: space-between;
     align-items: center;
     padding: 27px 20px;
-    /* border: 1px solid red; */
   }
   header nav ul {
     display: flex;

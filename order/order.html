@@ -11,6 +11,42 @@
     />
     <link rel="stylesheet" href="order.css" />
     <title>Order</title>
+    <style>
+      .order-seat {
+        display: flex;
+        gap: 20px;
+      }
+
+      .seat-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+      }
+      .seat-row {
+        display: flex;
+      }
+      .seat {
+        margin: 4px;
+      }
+      .seat input[type="checkbox"] {
+        display: none;
+      }
+      .seat label {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        background-color: #D6D8E7;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+        border-radius: 3px;
+      }
+      .seat input[type="checkbox"]:checked + label {
+        background-color: var(--blue);
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <!-- NAVBAR -->
@@ -132,9 +168,58 @@
           <span class="order-time">Regular - 13:00 PM</span>
           <button type="button" class="order-change">Change</button>
         </section>
-        <section class="order-choose-seat"></section>
-        <section class="order-seating-key"></section>
-        <section class="order-choosed"></section>
+        <section class="order-choose-seat">
+          <p>Choose Your Seat</p>
+          <div style="border-bottom: 5px solid lightslategrey; margin: 0 20px 20px;"></div>
+          <div class="order-seat">
+            <div class="left-seats" id="left-seats"></div>
+            <div class="right-seats" id="right-seats"></div>
+          </div>
+        </section>
+        <section class="order-seating-key">
+          <p>Seating Key</p>
+          <div>
+            <p>A - G</p>
+            <p>Available</p>
+            <p>Love Nest</p>
+            <p>1 - 14</p>
+            <p>Selected</p>
+            <p>Sold</p>
+          </div>
+        </section>
+        <section class="order-choosed">
+          <span>
+            <p>Choosed</p>
+            <p>C4</p>
+          </span>
+          <span>
+            <select name="seat-letter" id="seat-letter">
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="E">E</option>
+              <option value="F">F</option>
+            </select>
+            <select name="seat-number" id="seat-number">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+            </select>
+          </span>
+        </section>
         <button class="order-submit" type="submit">Submit</button>
       </form>
       <section class="confirm-order"></section>
@@ -321,4 +406,5 @@
       <p class="copyright-footer">&copy; 2020 Tickitz. All Rights Reserved</p>
     </footer>
   </body>
+  <script src="order.js"></script>
 </html>

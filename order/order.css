@@ -35,7 +35,9 @@ header > nav > ul {
 
 /* MAIN */
 main {
-  background: #A0A3BD33;
+  background: #a0a3bd33;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 /* ORDER HEAD */
@@ -43,14 +45,13 @@ form {
   background-color: var(--white);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas: 
-  " order-head "
-  " order-choose-seat "
-  " order-seating-key "
-  " order-choosed "
-  " order-submit "
-  ;
+  grid-template-rows: 1fr 400px 200px 1fr;
+  grid-template-areas:
+    " order-head "
+    " order-choose-seat "
+    " order-seating-key "
+    " order-choosed "
+    " order-submit ";
   justify-items: center;
 }
 .order-head {
@@ -62,7 +63,7 @@ form {
 .order-seating-key {
   grid-area: order-seating-key;
 }
-.order-choosed{
+.order-choosed {
   grid-area: order-choosed;
 }
 .order-submit {
@@ -75,13 +76,13 @@ form {
   flex-direction: column;
   align-items: center;
   gap: 17px;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   border-radius: 8px;
   padding: 14px;
   margin-top: 61px;
 }
 .order-movie-img {
-  background-image: url('../assets/movie-detail.png');
+  background-image: url("../assets/movie-detail.png");
   background-size: cover;
   height: 174px;
   width: 273px;
@@ -89,7 +90,6 @@ form {
   display: flex;
   justify-content: center;
 }
-
 .order-movie-title {
   font-family: Mulish;
   font-weight: 600;
@@ -106,18 +106,18 @@ form {
   border-radius: 20px;
   gap: 10px;
   padding: 12px 25px;
-  background: #A0A3BD1A;
+  background: #a0a3bd1a;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.75px;
-  color: #A0A3BD;
+  color: #a0a3bd;
   /* border: 1px solid red; */
 }
 .order-change {
   padding: 0 25px;
   border-style: none;
-  background: #1D4ED833;
+  background: #1d4ed833;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
@@ -125,6 +125,93 @@ form {
   text-align: center;
   border-radius: 20px;
   color: var(--blue);
+}
+
+/* ORDER-CHOOSE-SEAT */
+.order-choose-seat {
+}
+.order-choose-seat p {
+  font-family: Mulish;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 34px;
+  letter-spacing: 0.75px;
+  margin: 41px 0 36px;
+}
+.order-seat {
+  /* border: 1px solid red; */
+  max-width: 300px;
+  overflow-x: scroll;
+}
+
+/* ORDER SEATING KEY */
+.order-seating-key {
+  padding: 10px 20px;
+}
+.order-seating-key > p {
+  font-family: Mulish;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  margin-bottom: 20px;
+}
+.order-seating-key div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.order-seating-key div p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.order-seating-key div p:nth-child(1)::before {
+  content: url("../assets/arrow-down.svg");
+}
+.order-seating-key div p:nth-child(2)::before {
+  content: url("../assets/available.svg");
+}
+.order-seating-key div p:nth-child(3)::before {
+  content: url("../assets/love-nest.svg");
+}
+.order-seating-key div p:nth-child(4)::before {
+  content: url("../assets/arrow-right.svg");
+}
+.order-seating-key div p:nth-child(5)::before {
+  content: url("../assets/selected.svg");
+}
+.order-seating-key div p:nth-child(6)::before {
+  content: url("../assets/sold.svg");
+}
+
+/* ORDER CHOOSED */
+.order-choosed {
+  width: 100%;
+}
+.order-choosed span {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.order-choosed span p:first-child,
+.order-choosed span p:nth-child(2) {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  vertical-align: middle;
+}
+.order-choosed span p:nth-child(1) {
+color: var(--lightgrey);
+}
+.order-choosed span p:nth-child(2){
+color: var(--black);
+}
+.order-choosed select {
+  width: 120px;
+  height: 56px;
+  padding: 0 10px;
 }
 
 /* FOOTER */

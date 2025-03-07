@@ -11,6 +11,7 @@
   margin: 0;
   padding: 0;
   font-family: "Mulish", Verdana, Geneva, Tahoma, sans-serif;
+  border: 1px solid red;
 }
 header > nav {
   border-bottom: 1px solid #dedede;
@@ -125,6 +126,7 @@ form {
   text-align: center;
   border-radius: 20px;
   color: var(--blue);
+  cursor: pointer;
 }
 
 /* ORDER-CHOOSE-SEAT */
@@ -135,6 +137,11 @@ form {
   line-height: 34px;
   letter-spacing: 0.75px;
   margin: 41px 0 36px;
+}
+.order-choose-seat .seat-screen {
+  border-bottom: 5px solid lightslategrey; 
+  margin: 0 auto 20px;
+  width: 80%;
 }
 .order-seat {
   max-width: 300px;
@@ -257,15 +264,24 @@ form {
 /* CONFIRM ORDER */
 .confirm-order {
   /* position: absolute; */
-  background-color: var(--white);
+  /* background-color: var(--white); */
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 80px 60px;
-  margin: 20px;
+  
 }
-.confirm-order > p {
+.confirm-order-contain {
+  padding: 40px 30px 60px;
+  margin: 20px;
+  background-color: var(--white);
+  padding: 16px 22px 24px;
+  border-radius: 5px;
+}
+.confirm-order-contain > svg {
+  width: 100%;
+}
+.confirm-order-contain > p {
   font-weight: 600;
   font-size: 24px;
   line-height: 34px;
@@ -274,14 +290,14 @@ form {
   vertical-align: middle;
   margin: 30px 0;
 }
-.confirm-order table {
+.confirm-order-contain table {
   border-collapse: collapse;
 }
-.confirm-order table th,
-.confirm-order table th {
+.confirm-order-contain table th,
+.confirm-order-contain table th {
   padding-top: 10px;
 }
-.confirm-order table th {
+.confirm-order-contain table th {
   text-align: start;
   color: #6B6B6B;
   font-weight: 400;
@@ -290,11 +306,11 @@ form {
   letter-spacing: 0.75px;
   vertical-align: middle;
 }
-.confirm-order table td {
+.confirm-order-contain table td {
   text-align: end;
   padding-left: 30px;
 }
-.confirm-order table tr:last-child th {
+.confirm-order-contain table tr:last-child th {
   font-weight: 600;
   font-size: 16px;
   line-height: 34px;
@@ -302,10 +318,13 @@ form {
   vertical-align: middle;
   color: var(--black);
 }
-.confirm-order table tr:nth-child(5) th,
-.confirm-order table tr:nth-child(5) td{
+.confirm-order-contain table tr:nth-child(5) th,
+.confirm-order-contain table tr:nth-child(5) td{
   padding-top: 10px;
   border-bottom: 1px solid #6b6b6b43;
+}
+.confirm-order-contain table tr:nth-child(6) td {
+  color: var(--blue);
 }
 .confirm-order button {
   font-family: Mulish;
@@ -328,15 +347,10 @@ form {
 /* FOOTER */
 footer {
   display: grid;
+  gap: 20px;
+  justify-content: center;
   padding: 64px 24px;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-areas:
-    " tickitz "
-    " explore "
-    " sponsor "
-    " follow "
-    " copyright ";
+  grid-template-columns: repeat(auto-fill, 250px);
 }
 footer > ul > div {
   display: flex;
@@ -399,13 +413,84 @@ h5 {
   display: none;
 }
 .copyright-footer {
-  grid-area: copyright;
   display: flex;
   align-items: center;
 }
 
 @media screen and (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 500px;
+  }
+  form {
+    border-radius: 8px;
+    margin: 20px;
+  }
+
+  /* ORDER HEAD */
+  .order-head {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 100px;
+    /* grid-template-rows: 100px; */
+    grid-template-areas: 
+      " img  title  . "
+      " img  genre  . "
+      " img  time  button "
+    ;
+    align-items: start;
+  }
+  .order-head .order-movie-img {
+    grid-area: img;
+
+  }
+  .order-head .order-movie-title {
+    grid-area: title;
+  }
+  .order-head .order-movie-genre{
+    grid-area: genre;
+  }
+  .order-head .order-time {
+    grid-area: time;
+  }
+  .order.head button {
+    grid-area: button;
+    align-items: end;
+  }
+
+  /* BUTTON SUBMIT */
+  .order-submit {
+    width: 85%;
+  }
+
+  /* CONFIRM ORDER */
+  .confirm-order-contain table tr:last-child th {
+    font-weight: 600;
+    font-size: 19px;
+  }
+  .confirm-order-contain table tr:nth-child(6) td {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .confirm-order button {
+    width: 85%;
+  }
+
+  /* ORDER CHOOSE SEAT */
+  .order-choose-seat {
+    width: 100%;
+  }
+  .order-seat {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+  }
+  .order-choose-seat > .seat-screen {
+    width: 50%;
+  }
 }
+
+
 
 /* MQ For  Navbar & Footer*/
 @media screen and (min-width: 768px) {
@@ -483,25 +568,11 @@ h5 {
   footer > p {
     margin: 50px 0;
   }
-  footer {
-    color: var(--lightgrey);
-    display: grid;
-    grid-template-columns: 250px 250px 250px 250px;
-    grid-template-rows: 1fr 100px;
-    grid-template-areas:
-      " tickitz  explore  sponsor  follow "
-      " copyright  copyright  copyright  copyright ";
-    justify-content: center;
-    column-gap: 50px;
-  }
-
   .tickitz-footer {
-    grid-area: tickitz;
     padding-left: 10px;
   }
 
   .explore-footer {
-    grid-area: explore;
     padding-left: 10px;
     /* color: var(--gray); */
   }
@@ -521,11 +592,9 @@ h5 {
   }
 
   .sponsor-footer {
-    grid-area: sponsor;
     padding-left: 10px;
   }
   .follow-footer {
-    grid-area: follow;
     padding-left: 10px;
   }
   .follow-footer li {

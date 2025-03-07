@@ -488,8 +488,6 @@ h5 {
   }
 }
 
-
-
 /* MQ For  Navbar & Footer*/
 @media screen and (min-width: 768px) {
   /* NAVBAR */
@@ -588,7 +586,6 @@ h5 {
   .follow-footer h5 {
     font-size: 16px;
   }
-
   .sponsor-footer {
     padding-left: 10px;
   }
@@ -599,7 +596,6 @@ h5 {
     display: flex;
     align-items: center;
     gap: 5px;
-    font-family: Mulish;
     font-weight: 600;
     font-size: 14px;
     line-height: 17.57px;

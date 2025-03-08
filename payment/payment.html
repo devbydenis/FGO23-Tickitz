@@ -188,20 +188,60 @@
             <input type="phone-number" name="phone-number" id="phone-number">
           </div>
         </div>
-        
         <div class="payment-method">
           <h1>Payment Method</h1>
-          <div>
-            <span><img src="../assets/gpay.svg" alt="gpay"></span>
-            <span><img src="../assets/visa.svg" alt="visa"></span>
-            <span><img src="../assets/gopay.svg" alt="gopay"></span>
-            <span><img src="../assets/paypal.svg" alt="paypal"></span>
-            <span><img src="../assets/dana.svg" alt="dana"></span>
-            <span><img src="../assets/bca.svg" alt="bca"></span>
-            <span><img src="../assets/bri.svg" alt="bri"></span>
-            <span><img src="../assets/ovo.svg" alt="ovo"></span>
-          </div>
+          <ul>
+            <li>
+              <label for="gpay">
+                <img src="../assets/gpay.svg" alt="gpay">
+              </label>
+              <input type="radio" name="payment-method" id="gpay" value="gpay">
+            </li>
+            <li>
+              <label for="visa">
+                <img src="../assets/visa.svg" alt="visa">
+              </label>
+              <input type="radio" name="payment-method" id="visa" value="visa" >
+            </li>
+            <li>
+              <label for="gopay">
+                <img src="../assets/gopay.svg" alt="gopay">
+              </label>
+              <input type="radio" name="payment-method" id="gopay" value="gopay">
+            </li>
+            <li>
+              <label for="paypal">
+                <img src="../assets/paypal.svg" alt="paypal">
+              </label>
+              <input type="radio" name="payment-method" id="paypal" value="paypal">
+            </li>
+            <li>
+              <label for="dana">
+                <img src="../assets/dana.svg" alt="dana">
+              </label>
+              <input type="radio" name="payment-method" id="dana" value="dana">
+            </li>
+            <li>
+              <label for="bca">
+                <img src="../assets/bca.svg" alt="bca">
+              </label>
+              <input type="radio" name="payment-method" id="bca" value="bca">
+            </li>
+            <li>
+              <label for="bri">
+                <img src="../assets/bri.svg" alt="bri">
+              </label>
+              <input type="radio" name="payment-method" id="bri" value="bri">
+            </li>
+            <li>
+              <label for="ovo">
+                <img src="../assets/ovo.svg" alt="ovo">
+              </label>
+              <input type="radio" name="payment-method" id="ovo" value="ovo">
+            </li>
+          </ul>
         </div>
+        <button class="pay-order-btn" type="button">Pay Your Order</button>
       </form>
     </main>
 
@@ -386,5 +426,5 @@
       <p class="copyright-footer">&copy; 2020 Tickitz. All Rights Reserved</p>
     </footer>
   </body>
-  <script src=""></script>
+  <script src="payment.js"></script>
 </html>

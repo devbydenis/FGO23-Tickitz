@@ -158,7 +158,22 @@
     
     <!-- MAIN -->
     <main>
-      <section class="payment-timeline"></section>
+      <section class="payment-timeline">
+        <div>
+          <span>1</span>
+          <p>dates & time</p>
+        </div>
+        <div></div>
+        <div>
+          <span>2</span>
+          <p>Seat</p>
+        </div>
+        <div></div>
+        <div>
+          <span>3</span>
+          <p>Payment</p>
+        </div>
+      </section>
       <form class="payment-main">
         <div class="payment-info">
           <h1>Payment Info</h1>
@@ -177,15 +192,15 @@
           <h1>Personal Info</h1>
           <div>
             <label for="fullname">full name</label>
-            <input type="text" name="fullname" id="fullname">
+            <input type="text" name="fullname" id="fullname" placeholder="John Doe">
           </div>
           <div>
             <label for="email">email</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" placeholder="example@gmail.com">
           </div>
           <div>
             <label for="phone-number">phone number</label>
-            <input type="phone-number" name="phone-number" id="phone-number">
+            <input type="phone-number" name="phone-number" id="phone-number" placeholder="+628123456789">
           </div>
         </div>
         <div class="payment-method">
@@ -243,6 +258,25 @@
         </div>
         <button class="pay-order-btn" type="button">Pay Your Order</button>
       </form>
+      <section class="payment-modal">
+        <h2>Payment Info</h2>
+        <div>
+          <p>No. Rekening Virtual :</p>
+          <span>
+            <p>12321328913829724</p>
+            <button>Copy</button>
+          </span>
+        </div>
+        <div>
+          <p>Total Payment</p>
+          <p>$30</p>
+          <p>Pay this payment bill before it is due, on June 23, 2023. If the bill has not been paid by the specified time, it will be forfeited</p>
+        </div>
+        <div>
+          <button type="button">Check Payment</button>
+          <button type="button">Pay Later</button>
+        </div>
+      </section>
     </main>
 
     <!-- FOOTER -->

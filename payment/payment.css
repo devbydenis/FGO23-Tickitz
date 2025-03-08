@@ -1,6 +1,6 @@
 :root {
   --white: #ffffff;
-  --lightgrey: #A0A3BD;
+  --lightgrey: #a0a3bd;
   --gray: #4e4b66;
   --black: #121212;
   --blue: #1d4ed8;
@@ -36,7 +36,16 @@ header > nav > ul {
 
 /* <<<<<<<<<<<<<< WRITE YOUR STYLE HERE >>>>>>>>>>>>>>> */
 main {
-  background-color: var(--lightgrey);
+  background: #A0A3BD33;
+  position: relative;
+  z-index: 111111;
+}
+button {
+  cursor: pointer;
+  border-style: none;
+}
+button:hover {
+  opacity: 0.5;
 }
 /* Payment timeline */
 .payment-timeline {
@@ -69,6 +78,7 @@ main {
   line-height: 32px;
   letter-spacing: 0.75px;
   color: var(--black);
+  border-bottom: 1px solid #E6E6E6;
 }
 .payment-info p:last-child {
   font-family: Mulish;
@@ -86,7 +96,6 @@ main {
 .personal-info div label {
   display: block;
   margin: 14px 0;
-  font-family: Mulish;
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
@@ -97,9 +106,11 @@ main {
   width: 100%;
   height: 50px;
   border-style: none;
-  outline: 1px solid #DEDEDE;
+  outline: 1px solid #dedede;
   border-radius: 5px;
   padding: 0 10px;
+  /* position: relative; */
+  /* z-index: -999; */
 }
 
 /* payment method */
@@ -107,8 +118,6 @@ main {
   margin: 27px 0 36px;
 }
 .payment-method ul {
-  /* justify-content: space-around; */
-  /* flex-wrap: wrap; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: 18px;
@@ -121,8 +130,12 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px solid #DEDEDE;
+  border: 2px solid #dedede;
   border-radius: 5px;
+  /* z-index: -1; */
+}
+.payment-method ul li label {
+  cursor: pointer;
 }
 .payment-method ul li input[type="radio"] {
   display: none;
@@ -144,13 +157,103 @@ main {
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 .pay-order-btn:hover {
   background-color: white;
   color: var(--blue);
   border: 1px solid var(--blue);
 }
+
+/* Payment Modal */
+.payment-modal {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 23px 30px;
+  border-radius: 16px;
+  background-color: var(--white);
+}
+.payment-modal h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0.25px;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 35px;
+}
+.payment-modal div > p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: var(--lightgrey);
+}
+.payment-modal div span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.payment-modal div span p {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0.25px;
+  vertical-align: middle;
+  color: var(--black);
+}
+.payment-modal div span button {
+  width: 72px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid var(--blue);
+  background-color: white;
+}
+.payment-modal div:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.payment-modal div p:nth-child(2) {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0.25px;
+  vertical-align: middle;
+  color: var(--blue);
+}
+.payment-modal div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.payment-modal div:last-child button {
+  height: 56px;
+  border-radius: 4px;
+  font-family: Mulish;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  text-align: center;
+  vertical-align: middle;
+  transition: ease .5s;
+}
+.payment-modal div:last-child button:first-child {
+  background-color: var(--blue);
+  color: var(--white);
+}
+.payment-modal div:last-child button:last-child {
+  background-color: var(white);
+
+}
+
 
 /* <<<<<<<<<<<<<< WRITE YOUR STYLE HERE >>>>>>>>>>>>>>> */
 
@@ -226,6 +329,50 @@ h5 {
 .copyright-footer {
   display: flex;
   align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .payment-timeline {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    gap: 10px;
+    padding: 20px 0;
+    text-transform: capitalize;
+  }
+  .payment-timeline div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .payment-timeline div span {
+    padding: 10px 15px;
+    border-radius: 50%;
+    background-color: #008000;
+    color: white;
+  }
+  .payment-timeline div p {
+    color: gray;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    vertical-align: middle;
+  }
+  .payment-timeline div:last-child span {
+    background-color: var(--blue);
+    color: var(--white);
+  }
+  .payment-timeline div:nth-child(even) {
+    width: 100px;
+    border-bottom:2px dashed var(--lightgrey);
+  }
+  .payment-main {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
 
 /* MQ For  Navbar & Footer*/

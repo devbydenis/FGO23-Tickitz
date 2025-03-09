@@ -162,6 +162,22 @@ form section:last-child > img {
   width: 24px;
 }
 
+/* SUCCESS ERROR VALIDATION */
+.error > input[type="password"],
+.error > input[type="email"] {
+    border: 1px solid red;
+}
+.error > small {
+    color: red;
+}
+.success > input[type="email"],
+.success > input[type="password"] {
+    border: 1px solid rgb(46, 215, 46);
+}
+.success > small {
+    color: rgb(46, 215, 46);
+}
+
 @media screen and (min-width: 768px) {
   .tickitz {
     width: 276px;

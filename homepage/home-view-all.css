@@ -190,8 +190,9 @@ header > nav > ul {
 }
 
 .movies-carousel {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  justify-content: center; 
+  grid-template-columns: repeat(auto-fit, 250px);
   gap: 20px;
   overflow-x: scroll;
   margin-top: 20px;

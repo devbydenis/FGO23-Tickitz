@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="home-view-all.css" />
-    <title>Home</title>
+    <title>home view all</title>
   </head>
   <body>
+    <!-- NAVBAR -->
     <header>
       <nav class="isDisplayMobile">
         <ul class="wrapper">
           <li class="nav-logo">
-            <a href="./home.html">
+            <a href="../index.html">
               <svg
                 width="93"
                 height="37"
@@ -64,7 +71,7 @@
       </nav>
       <nav class="isDisplayDesktop">
         <div class="wrapper">
-          <a href="./home.html">
+          <a href="../index.html">
             <svg
               width="130"
               height="51"
@@ -87,8 +94,8 @@
             </svg>
           </a>
           <ul class="nav-menu">
-            <li><a href="./home.html">Home</a></li>
-            <li><a href="#">Movie</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../homepage/home-view-all.html">Movie</a></li>
             <li><a href="#">Buy Ticket</a></li>
           </ul>
           <ul class="isLoginShow">
@@ -128,280 +135,56 @@
           <div class="movies-search">
             <label for="movies-search">Cari Event</label>
             <span>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="11.7664" cy="11.7669" r="8.98856" stroke="#A0A3BD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M18.0181 18.4854L21.5421 22.0002" stroke="#A0A3BD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>                
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11.7664"
+                  cy="11.7669"
+                  r="8.98856"
+                  stroke="#A0A3BD"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18.0181 18.4854L21.5421 22.0002"
+                  stroke="#A0A3BD"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
               <input type="text" name="movies-search" id="movies-search" />
             </span>
           </div>
           <div class="movies-filter">
             <h5>Filter</h5>
-            <!-- <div>
-              
-              <label for="thriller" class="label-filter">
-                <span>Thriller</span>
-                <input type="checkbox" name="movies-filter" id="thriller" value="thriller">
-              </label>
-              
-              <label for="horror" class="label-filter">
-                <span>Horror</span>
-                <input type="checkbox" name="movies-filter" id="horror" value="horror">
-              </label>
-              <label for="romantic" class="label-filter">
-                <span>Romantic</span>
-                <input type="checkbox" name="movies-filter" id="romantic" value="romantic">
-              </label>
-              <label for="adventure" class="label-filter">
-                <span>Adventure</span>
-                <input type="checkbox" name="movies-filter" id="adventure" value="adventure">
-              </label>
-              <label for="sci-fi" class="label-filter">
-                <span>Sci-Fi</span>
-                <input type="checkbox" name="movies-filter" id="sci-fi" value="sci-fi">
-              </label>
-            </div> -->
             <div class="filter-container">
               <label class="filter-button">
-                <input type="checkbox" name="horror" value="horror"> <span>Horror</span>
+                <input type="checkbox" name="horror" value="horror" />
+                <span>Horror</span>
               </label>
               <label class="filter-button">
-                <input type="checkbox" name="romantic" value="romantic"> <span>Romantic</span>
+                <input type="checkbox" name="romantic" value="romantic" />
+                <span>Romantic</span>
               </label>
               <label class="filter-button">
-                <input type="checkbox" name="adventure" value="adventure"> <span>Adventure</span>
+                <input type="checkbox" name="adventure" value="adventure" />
+                <span>Adventure</span>
               </label>
               <label class="filter-button">
-                <input type="checkbox" name="sci-fi" value="sci-fi"> <span>Sci-Fi</span>
+                <input type="checkbox" name="sci-fi" value="sci-fi" />
+                <span>Sci-Fi</span>
               </label>
             </div>
           </div>
         </form>
-        <div class="movies-carousel">
-          <div>
-            <!-- show detail hover -->
-            <div class="movies-menu-hover">
-              <a href="../detail/detail.html"><button>Details</button></a>
-              <a href="#"><button>Buy Tickets</button></a>
-            </div>
-            <img
-              src="../assets/hero-1.png"
-              alt="Black Widow"
-              width="240"
-              height="369"
-            />
-            <a href="#">Black Widow</a>
-            <ul>
-              <li>Action</li>
-              <li>Adventure</li>
-            </ul>
-          </div>
-          <div>
-            <!-- show detail hover -->
-            <span>Recomended</span>
-            <div class="movies-menu-hover">
-              <a href="../detail/detail.html"><button>Details</button></a>
-              <a href="#"><button>Buy Tickets</button></a>
-            </div>
-            <img
-              src="../assets/hero-2.png"
-              alt="Witches"
-              width="240"
-              height="369"
-            />
-            <a href="#">Witches</a>
-            <ul>
-              <li>Comedy</li>
-              <li>Adventure</li>
-            </ul>
-          </div>
-          <div>
-            <!-- show detail hover -->
-            <div class="movies-menu-hover">
-              <a href="../detail/detail.html"><button>Details</button></a>
-              <a href="#"><button>Buy Tickets</button></a>
-            </div>
-            <img
-              src="../assets/hero-3.png"
-              alt="Tenet"
-              width="240"
-              height="369"
-            />
-            <a href="#">Tenet</a>
-            <ul>
-              <li>Action</li>
-              <li>Sci-fi</li>
-            </ul>
-          </div>
-          <div>
-            <!-- show detail hover -->
-            <div class="movies-menu-hover">
-              <a href="../detail/detail.html"><button>Details</button></a>
-              <a href="#"><button>Buy Tickets</button></a>
-            </div>
-            <img
-              src="../assets/hero-4.png"
-              alt="Spiderman Homecoming"
-              width="240"
-              height="369"
-            />
-            <a href="#">Spiderman</a>
-            <ul>
-              <li>Action</li>
-              <li>Adventure</li>
-            </ul>
-          </div>
-        </div>
-        <div class="movies-carousel">
-          <div>
-            <!-- show detail hover -->
-            <div class="movies-menu-hover">
-              <a href="../detail/detail.html"><button>Details</button></a>
-              <a href="#"><button>Buy Tickets</button></a>
-            </div>
-            <img
-              src="../assets/hero-1.png"
-              alt="Black Widow"
-              width="240"
-              height="369"
-            />
-            <a href="#">Black Widow</a>
-            <ul>
-              <li>Action</li>
-              <li>Adventure</li>
-            </ul>
-          </div>
-          <div>
-            <!-- show detail hover -->
-            <span>Recomended</span>
-            <div class="movies-menu-hover">
-              <a href="../detail/detail.html"><button>Details</button></a>
-              <a href="#"><button>Buy Tickets</button></a>
-            </div>
-            <img
-              src="../assets/hero-2.png"
-              alt="Witches"
-              width="240"
-              height="369"
-            />
-            <a href="#">Witches</a>
-            <ul>
-              <li>Comedy</li>
-              <li>Adventure</li>
-            </ul>
-          </div>
-          <div>
-            <!-- show detail hover -->
-            <div class="movies-menu-hover">
-              <a href="../detail/detail.html"><button>Details</button></a>
-              <a href="#"><button>Buy Tickets</button></a>
-            </div>
-            <img
-              src="../assets/hero-3.png"
-              alt="Tenet"
-              width="240"
-              height="369"
-            />
-            <a href="#">Tenet</a>
-            <ul>
-              <li>Action</li>
-              <li>Sci-fi</li>
-            </ul>
-          </div>
-          <div>
-            <!-- show detail hover -->
-            <div class="movies-menu-hover">
-              <a href="../detail/detail.html"><button>Details</button></a>
-              <a href="#"><button>Buy Tickets</button></a>
-            </div>
-            <img
-              src="../assets/hero-4.png"
-              alt="Spiderman Homecoming"
-              width="240"
-              height="369"
-            />
-            <a href="#">Spiderman</a>
-            <ul>
-              <li>Action</li>
-              <li>Adventure</li>
-            </ul>
-          </div>
-        </div>
-        <div class="movies-carousel">
-          <div>
-            <!-- show detail hover -->
-            <div class="movies-menu-hover">
-              <a href="../detail/detail.html"><button>Details</button></a>
-              <a href="#"><button>Buy Tickets</button></a>
-            </div>
-            <img
-              src="../assets/hero-1.png"
-              alt="Black Widow"
-              width="240"
-              height="369"
-            />
-            <a href="#">Black Widow</a>
-            <ul>
-              <li>Action</li>
-              <li>Adventure</li>
-            </ul>
-          </div>
-          <div>
-            <!-- show detail hover -->
-            <span>Recomended</span>
-            <div class="movies-menu-hover">
-              <a href="../detail/detail.html"><button>Details</button></a>
-              <a href="#"><button>Buy Tickets</button></a>
-            </div>
-            <img
-              src="../assets/hero-2.png"
-              alt="Witches"
-              width="240"
-              height="369"
-            />
-            <a href="#">Witches</a>
-            <ul>
-              <li>Comedy</li>
-              <li>Adventure</li>
-            </ul>
-          </div>
-          <div>
-            <!-- show detail hover -->
-            <div class="movies-menu-hover">
-              <a href="../detail/detail.html"><button>Details</button></a>
-              <a href="#"><button>Buy Tickets</button></a>
-            </div>
-            <img
-              src="../assets/hero-3.png"
-              alt="Tenet"
-              width="240"
-              height="369"
-            />
-            <a href="#">Tenet</a>
-            <ul>
-              <li>Action</li>
-              <li>Sci-fi</li>
-            </ul>
-          </div>
-          <div>
-            <!-- show detail hover -->
-            <div class="movies-menu-hover">
-              <a href="../detail/detail.html"><button>Details</button></a>
-              <a href="#"><button>Buy Tickets</button></a>
-            </div>
-            <img
-              src="../assets/hero-4.png"
-              alt="Spiderman Homecoming"
-              width="240"
-              height="369"
-            />
-            <a href="#">Spiderman</a>
-            <ul>
-              <li>Action</li>
-              <li>Adventure</li>
-            </ul>
-          </div>
-        </div>
+        <div class="movies-carousel"></div>
       </section>
       <section class="pagination">
         <button>1</button>
@@ -409,27 +192,57 @@
         <button>3</button>
         <button>4</button>
         <button>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21 12H3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M15 6L21 12L15 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21 12H3"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M15 6L21 12L15 18"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
           </svg>
-          </button>
+        </button>
       </section>
       <section class="subscribe">
         <p>Subscribe to our newsletter</p>
         <form>
           <div>
             <label for="firstname"></label>
-            <input type="text" name="firstname" id="firstname" placeholder="First name">
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              placeholder="First name"
+            />
           </div>
           <div>
             <label for="email"></label>
-            <input type="text" name="email" id="email" placeholder="Email address">
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Email address"
+            />
           </div>
-          <button type="button">Subscribe Now</button> <!-- change button type later -->
+          <button type="button">Subscribe Now</button>
+          <!-- change button type later -->
         </form>
       </section>
     </main>
+    <!-- FOOTER -->
     <footer>
       <section class="tickitz-footer">
         <svg
@@ -610,4 +423,5 @@
       <p class="copyright-footer">&copy; 2020 Tickitz. All Rights Reserved</p>
     </footer>
   </body>
+  <script src="home.js"></script>
 </html>

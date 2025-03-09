@@ -14,14 +14,22 @@ wrapper.addEventListener("click", () => {
   });
 });
 
+const payYourOrder = document.querySelector(".pay-order-btn");
+const inputPersonalInfo = document.querySelector(".personal-info div input");
+const listPaymentMethod = document.querySelector(".payment-method ul li");
+const paymentModal = document.querySelector(".payment-modal");
+const paymentMain = document.querySelector(".payment-main");
+const main = document.querySelector("main");
+const inputAll = document.querySelector("input");
+const liAll = document.querySelector("li");
 
-const payYourOrder = document.querySelector(".pay-order-btn")
-const inputPersonalInfo = document.querySelector(".personal-info div input")
-const listPaymentMethod= document.querySelector(".payment-method ul li")
-const main = document.querySelector(".payment-main")
-payYourOrder.addEventListener('click', () => {
-  inputPersonalInfo.style.zIndex = '-1'
-  inputPersonalInfo.style.position = 'relative'
-  listPaymentMethod.style.zIndex = '-1'
-
-})
+payYourOrder.addEventListener("click", () => {
+  paymentModal.style.display = "block";
+  inputPersonalInfo.style.position = "relative";
+  inputPersonalInfo.style.zIndex = "-999";
+  listPaymentMethod.style.zIndex = "-999";
+  main.style.backgroundColor = "#121212";
+  paymentMain.style.backgroundColor = "#121212";
+  // inputAll.style.zIndex = '-111'
+  // liAll.style.zIndex = '-111'
+});

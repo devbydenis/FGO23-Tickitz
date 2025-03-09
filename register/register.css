@@ -163,6 +163,9 @@ form section:last-child > img {
 }
 
 /* SUCCESS ERROR VALIDATION */
+small {
+  margin-top: 10px;
+}
 .error > input[type="password"],
 .error > input[type="email"] {
     border: 1px solid red;

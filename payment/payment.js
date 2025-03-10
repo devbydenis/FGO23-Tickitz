@@ -22,14 +22,19 @@ const paymentMain = document.querySelector(".payment-main");
 const main = document.querySelector("main");
 const inputAll = document.querySelector("input");
 const liAll = document.querySelector("li");
+const btnPayLater = document.querySelector(".btn-pay-later")
 
 payYourOrder.addEventListener("click", () => {
   paymentModal.style.display = "block";
-  inputPersonalInfo.style.position = "relative";
-  inputPersonalInfo.style.zIndex = "-999";
-  listPaymentMethod.style.zIndex = "-999";
-  main.style.backgroundColor = "#121212";
-  paymentMain.style.backgroundColor = "#121212";
-  // inputAll.style.zIndex = '-111'
-  // liAll.style.zIndex = '-111'
+  paymentMain.style.position = "relative"
+  paymentMain.style.zIndex = "-1"
+  main.style.backgroundColor = "#121212cd";
+  paymentMain.style.backgroundColor = "#121212cd";
 });
+
+btnPayLater.addEventListener('click', () => {
+  paymentModal.style.display = "none";
+  paymentMain.style.zIndex = "1"
+  main.style.backgroundColor = "#A0A3BD33";
+  paymentMain.style.backgroundColor = "var(--white)";
+})

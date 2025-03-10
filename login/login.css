@@ -15,7 +15,7 @@
 
 body {
   background-image: url("../assets/background.png");
-  background-attachment: local;
+  background-attachment: fixed;
   background-size: cover;
   background-position-y: center;
   display: flex;
@@ -56,6 +56,10 @@ form > p {
 
 form > section:first-child > p {
   margin: 25px 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  color: var(--lightgrey);
 } 
 
 form section {

@@ -104,7 +104,7 @@ const getGenres = async ({title, poster_path, genre_ids}) => {
 
 getMovies()
 
-let isLogin = false
+// let isLogin = false
 const navHamburger = document.querySelector("#nav-hamburger")
 const hamburgerMenu = document.querySelector(".hamburger-menu")
 navHamburger.addEventListener('click', showHamburger)

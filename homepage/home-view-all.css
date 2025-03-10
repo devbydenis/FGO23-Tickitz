@@ -456,7 +456,7 @@ footer > ul > div {
   }
 
   .movies-carousel {
-    justify-content: start;
+    justify-content: center;
   }
 }
 

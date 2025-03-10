@@ -103,3 +103,20 @@ const getGenres = async ({title, poster_path, genre_ids}) => {
 }
 
 getMovies()
+
+let isLogin = false
+const navHamburger = document.querySelector("#nav-hamburger")
+const hamburgerMenu = document.querySelector(".hamburger-menu")
+navHamburger.addEventListener('click', showHamburger)
+let i = 0
+function showHamburger() {
+  if (i % 2 === 1) {
+    hamburgerMenu.style.display = "block"
+    i++
+    return
+  }
+  hamburgerMenu.style.display = "none"
+  i++
+  // hamburgerMenu.classList.toggle(".hide-dropdown")
+  // hamburgerMenu.classList.toggle(".rotate-button")
+}

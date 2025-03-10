@@ -27,6 +27,36 @@ header > nav > ul {
 .nav-hamburger {
   cursor: pointer;
 }
+.hamburger-menu {
+  /* display: none; */
+  /* display: block; */
+  background-color: var(--blue);
+  /* height: 100px; */
+  /* transition: all 1s; */
+  padding: 20px 0;
+}
+.hamburger-menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.hamburger-menu ul a {
+  text-decoration: none;
+  color: white;
+}
+ul a:hover {
+  outline: 1px solid white;
+}
+.hide-dropdown {
+  display: none;
+}
+.rotate-button {
+  transform: rotate(180deg);
+}
+
 .isDisplayMobile {
   display: block;
 }

@@ -111,11 +111,11 @@ navHamburger.addEventListener('click', showHamburger)
 let i = 0
 function showHamburger() {
   if (i % 2 === 1) {
-    hamburgerMenu.style.display = "block"
+    hamburgerMenu.style.display = "none"
     i++
     return
   }
-  hamburgerMenu.style.display = "none"
+  hamburgerMenu.style.display = "block"
   i++
   // hamburgerMenu.classList.toggle(".hide-dropdown")
   // hamburgerMenu.classList.toggle(".rotate-button")
